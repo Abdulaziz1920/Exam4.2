@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <title>Главная</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header__body">
+            <div class="header__main">
+              <div class="header__options">
+                <div class="header__search">
+                  <form class="form">
+                    <button>
+                      <svg
+                        width="17"
+                        height="16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-labelledby="search"
+                      >
+                        <path
+                          d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                          stroke="currentColor"
+                          stroke-width="1.333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                    <input
+                      id="search"
+                      class="input"
+                      placeholder="Type your text"
+                      required=""
+                      type="text"
+                    />
+                    <button class="reset" type="reset">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="header__sorting">
+                  <select name="select" id="select">
+                    <option value="All">All</option>
+                    <option class="married" value="Married">Married</option>
+                    <option class="single" value="Single">Single</option>
+                  </select>
+                  <select name="select" id="sorting">
+                    <option class="asc" value="asc">Ascending</option>
+                    <option class="desc" value="desc">Descending</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Popup -->
+    <div class="popup">
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="popup__content">
+            <div class="popup__title">
+              <h1>Add Gamers</h1>
+            </div>
+            <div class="popup__input">
+              <form class="formsStudentAdd" action="#">
+                <input required type="text" id="image" placeholder="Image" />
+                <input
+                  required
+                  type="text"
+                  id="FirsName"
+                  placeholder="FirstName"
+                />
+                <input
+                  required
+                  type="text"
+                  id="LastName"
+                  placeholder="LastName"
+                />
+                <input required type="email" id="Email" placeholder="Email" />
+                <input
+                  required
+                  type="tel"
+                  pattern="^\+998(33|7(0|1|7)|88|9\d{1})(\d{7})$"
+                  id="phonenumber"
+                  placeholder="Phone"
+                />
+                <input
+                  onclick="closeModal()"
+                  id="btn"
+                  class="addTitle"
+                  type="submit"
+                  data-dismiss="modal"
+                  aria-hidden="true"
+                  value="Add Gamers"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="mains">
+            <div class="mainLeft">
+              <h1>Good Evening John..!</h1>
+            </div>
+            <div class="mainRight">
+              <button class="open">Add Games</button>
+            </div>
+          </div>
+          <h2 class="mainSubtitle">Welcome to nairobi game zone</h2>
+        </div>
+      </section>
+      <section class="cardsItem">
+        <div class="container">
+          <div class="main">
+            <div class="main__body">
+              <div class="main__item">
+                <div class="main-cards-student"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cardsItem">
+        <div class="container">
+          <ul class="pagination"></ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/api.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/student.js"></script>
+  </body>
+</html>
